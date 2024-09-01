@@ -23,6 +23,6 @@ urlpatterns = [
     
     path('api/v1/properties/',include('properties.urls')),
     path('api/v1/tenants/',include('tenants.urls')),
-    path('api/v1/LeaseAgreement/',include('LeaseAgreement.urls')),
+    path('api/v1/leaseAgreement/',include('LeaseAgreement.urls')),
     path('api/v1/users/',include('users.urls')),
 ]
