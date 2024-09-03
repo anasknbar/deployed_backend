@@ -11,4 +11,5 @@ class CustomUser(AbstractUser):
     emergency_contact_name = models.CharField(max_length=100, null=True, blank=True)
     emergency_contact_phone = models.CharField(max_length=15, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
+    profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
     pass
