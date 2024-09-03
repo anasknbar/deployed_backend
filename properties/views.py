@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework.generics import ListAPIView,CreateAPIView,RetrieveUpdateDestroyAPIView,ListCreateAPIView
+from rest_framework.generics import ListAPIView,CreateAPIView,RetrieveUpdateDestroyAPIView
 from .models import Property
 from .serializers import PropertySerializer
 # Create your views here.

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     
     # apps
     'properties',
-    'tenants',
+
     'LeaseAgreement',
     'users',
     # libraries and frameworks
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     
 ]
 
+AUTH_USER_MODEL = 'users.CustomUser'
 
 
 

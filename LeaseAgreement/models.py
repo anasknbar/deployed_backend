@@ -1,10 +1,10 @@
 from django.db import models
-from tenants.models import Tenant
-# Create your models here.
 
+# Create your models here.
+from django.conf import settings
 class LeaseAgreement(models.Model):
     
-    tenant = models.ForeignKey(Tenant, on_delete=models.CASCADE, related_name='lease_agreements')
+    tenant = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='lease_agreements')
     property = models.ForeignKey('properties.Property', on_delete=models.CASCADE, related_name='lease_agreements')
     lease_start_date = models.DateField()
     lease_end_date = models.DateField(null=True, blank=True)
