@@ -25,6 +25,8 @@ urlpatterns = [
     path('api/v1/properties/',include('properties.urls')),
     path('api/v1/leaseAgreement/',include('LeaseAgreement.urls')),
     path('api/v1/users/',include('users.urls')),
+    path('api/v1/complaints/',include('complaintReq.urls')),
+    path('api/v1/leases/', include('LeaseAgreement.urls')),  
     
      
     path('api/token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),

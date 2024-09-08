@@ -11,6 +11,10 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['user_id'] = user.id
         token['is_superuser'] = user.is_superuser  # Adds is_superuser to the token payload
         token['is_staff'] = user.is_staff          # Adds is_staff to the token payload
-        token['email'] = user.email
+        token['phone_number'] = user.phone_number
+        token['username'] = user.username
+        token['address'] = user.address
+        
+        
 
         return token
