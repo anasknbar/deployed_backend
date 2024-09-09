@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 
 import os
-
+import dj_database_url
 # from dotenv import load_dotenv
 # load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-@qjp_3f!yn1-+du0rgcg+qk_8s1&3&=1161$l!9t#l3(3i3%gu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djang-backend-final-project.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','djang-backend-final-project.onrender.com']
 
 
 # Application definition
@@ -123,7 +123,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+# 
+DATABASES['default'] = dj_database_url.parse('postgresql://finale_project_postgres_user:Ll02WPl60NjOCKgyVvB5nQ8IduWOEfbu@dpg-crfjob5ds78s73co1490-a.oregon-postgres.render.com/finale_project_postgres')
 
 AUTH_PASSWORD_VALIDATORS = [
     {
