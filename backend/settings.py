@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
+
 import os
-from decouple import config
+
 # from dotenv import load_dotenv
 # load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -123,18 +123,6 @@ DATABASES = {
     }
 }
 
-# railway databse 
-# RAILWAY_DATABASE_PUBLIC_URL = config('RAILWAY_DATABASE_PUBLIC_URL')
-
-# if RAILWAY_DATABASE_PUBLIC_URL:
-#     DATABASES['default'] = dj_database_url.parse(RAILWAY_DATABASE_PUBLIC_URL)
-# else:
-#     print("RAILWAY_DATABASE_PUBLIC_URL is not set or empty.")
-
-# DATABASES['default'] = dj_database_url.parse("postgresql://postgres:IitINdZaEQctmpormrKjYvRvsKmGVwCA@junction.proxy.rlwy.net:13420/railway")
-
-# Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
